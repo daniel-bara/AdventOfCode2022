@@ -9,7 +9,7 @@ def main():
 class Tests(unittest.TestCase):
     def setUp(self):
         with open("Day 14/input_test.txt") as file:
-            self.lines_test = file.readlines()
+            self.lines_test = list(map(str.strip, file.readlines()))
 
     def test(self):
         pass
