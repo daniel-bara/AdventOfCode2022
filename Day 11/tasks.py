@@ -3,7 +3,7 @@ import unittest
 
 def main():
     with open("Day 11/input.txt") as file:
-        lines = file.readlines()
+        lines = list(map(str.strip, file.readlines()))
 
 
 class Tests(unittest.TestCase):
