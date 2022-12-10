@@ -61,7 +61,6 @@ def simulate_long_rope(movements, rope_length):
     # coordinate sytem positives right, up
     tail_abs = [[0, 0] for _ in range(rope_length)]
     all_tail_locations = {"00": 1}
-    # print("---", movements)
     for command in movements:
 
         match command:
@@ -84,7 +83,6 @@ def simulate_long_rope(movements, rope_length):
                     else:
                         movement = (tail_rel[i] / abs(tail_rel[i]))
                     tail_abs[s][i] = tail_abs[s][i] + movement
-        # print(command, tail_abs)
         all_tail_locations["".join(map(str, tail_abs[-1]))] = 1
     return len(all_tail_locations)
 
